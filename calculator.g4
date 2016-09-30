@@ -12,8 +12,8 @@ number
    : MINUS? DIGIT + (POINT DIGIT +)?
    ;
 
-variable
-   : MINUS? LETTER (LETTER | DIGIT)*
+atom 
+   : LPAREN expression RPARENT (op LPARENT expression RPAREN)*
    ;
 
 
