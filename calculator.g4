@@ -5,22 +5,11 @@ equation
    ;
 
 expression
-   : multiplyingExpression ((PLUS | MINUS) multiplyingExpression)*
-   ;
-
-multiplyingExpression
-   : powExpression ((TIMES | DIV) powExpression)*
-   ;
-
-powExpression
-   : atom (POW multiplyingExpression)?
+   : number (op number)*
    ;
 
 atom
-   : scientific
-   | variable
-   | LPAREN expression RPAREN
-   | func
+   : LBRACKET expression RBRACKET
    ;
 
 scientific
