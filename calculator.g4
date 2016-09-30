@@ -1,8 +1,4 @@
-grammar calculator;
-
-equation
-   : expression relop expression
-   ;
+grammar calculator1;
 
 expression
    : number (op number)*
@@ -12,15 +8,9 @@ number
    : MINUS? DIGIT + (POINT DIGIT +)?
    ;
 
-atom 
-   : LPAREN expression RPARENT (op LPARENT expression RPAREN)*
-   ;
-
-
 LPAREN
    : '('
    ;
-
 
 RPAREN
    : ')'
@@ -47,38 +37,9 @@ DIV
    ;
 
 
-GT
-   : '>'
-   ;
-
-
-LT
-   : '<'
-   ;
-
-
-EQ
-   : '='
-   ;
-
 
 POINT
    : '.'
-   ;
-
-
-E
-   : 'e' | 'E'
-   ;
-
-
-POW
-   : '^'
-   ;
-
-
-LETTER
-   : ('a' .. 'z') | ('A' .. 'Z')
    ;
 
 
