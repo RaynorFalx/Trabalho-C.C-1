@@ -11,6 +11,13 @@ number
 atom 
    : LPAREN expression RPAREN (op LPAREN expression RPAREN)*
    ;
+
+op
+   : PLUS
+   | MINUS
+   | TIMES
+   | DIV
+   ;
    
 LPAREN
    : '('
