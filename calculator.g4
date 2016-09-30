@@ -7,7 +7,9 @@ expression
 number
    : MINUS? DIGIT + (POINT DIGIT +)?
    ;
-
+atom 
+   : LPAREN expression RPAREN (op LPAREN expression RPAREN)*
+   ;
 LPAREN
    : '('
    ;
