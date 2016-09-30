@@ -8,81 +8,12 @@ expression
    : number (op number)*
    ;
 
-atom
-   : LBRACKET expression RBRACKET
-   ;
-
-scientific
-   : number (E number)?
-   ;
-
-func
-   : funcname LPAREN expression RPAREN
-   ;
-
-funcname
-   : COS
-   | TAN
-   | SIN
-   | ACOS
-   | ATAN
-   | ASIN
-   | LOG
-   | LN
-   ;
-
-relop
-   : EQ
-   | GT
-   | LT
-   ;
-
 number
    : MINUS? DIGIT + (POINT DIGIT +)?
    ;
 
 variable
    : MINUS? LETTER (LETTER | DIGIT)*
-   ;
-
-
-COS
-   : 'cos'
-   ;
-
-
-SIN
-   : 'sin'
-   ;
-
-
-TAN
-   : 'tan'
-   ;
-
-
-ACOS
-   : 'acos'
-   ;
-
-
-ASIN
-   : 'asin'
-   ;
-
-
-ATAN
-   : 'atan'
-   ;
-
-
-LN
-   : 'ln'
-   ;
-
-
-LOG
-   : 'log'
    ;
 
 
