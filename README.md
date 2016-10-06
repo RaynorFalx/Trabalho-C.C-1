@@ -33,5 +33,5 @@ EX: -5
 
 
 RaynorFalx - Juliano
-Arcax _ Marcos
+Arcax - Marcos
 Raquel - Raquel 
