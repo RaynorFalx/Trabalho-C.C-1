@@ -1,4 +1,4 @@
-grammar calculator1;
+grammar calculator2;
 
 expr
    : LPAREN (expr op)* atom (op expr)* RPAREN
