@@ -16,15 +16,37 @@ term
 number
    : MINUS? DIGIT + (POINT DIGIT +)?
    ;
-   
-   
+    
 op
-   : PLUS
-   | MINUS
-   | TIMES
-   | DIV
+   : multdiv
+   | subsum
    ;
    
+multidiv
+   :TIMES
+   |DIV
+   ;
+   
+subsum
+   :MINUS
+   |PLUS
+   ;
+
+TIMES
+   : '*'
+   ;
+
+DIV
+   : '/'
+   ;
+   
+MINUS
+   : '-'
+   ;
+   
+PLUS
+   : '+'
+   ;
    
 LPAREN
    : '('
@@ -34,27 +56,6 @@ LPAREN
 RPAREN
    : ')'
    ;
-
-
-PLUS
-   : '+'
-   ;
-
-
-MINUS
-   : '-'
-   ;
-
-
-TIMES
-   : '*'
-   ;
-
-
-DIV
-   : '/'
-   ;
-
 
 POINT
    : '.'
