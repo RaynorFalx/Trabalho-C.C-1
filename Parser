@@ -1,0 +1,47 @@
+header {package decaf;}
+
+options
+{
+	mangleLiteralPrefix = "TK_";
+	language="Java";
+}
+
+class DecafParser extends Parser;
+options
+{
+	importVocab=DecafScanner;
+	k=2;
+	buildAST=true;
+}
+
+expr
+   : LPAREN (expr op)* atom (op expr)* RPAREN
+	(op LPAREN (expr op)* atom (op expr)* RPAREN)*
+   ;
+
+atom
+   : term (subsum atom)*
+   ;
+   
+term
+   : number (multdiv term)*
+   ;
+
+number
+   : MINUS? DIGIT + (POINT DIGIT +)?
+   ;
+
+op
+   :multdiv
+   |subsum
+   ;
+
+multdiv
+   : TIMES
+   | DIV
+   ;
+   
+subsum
+   : MINUS
+   | PLUS
+   ;
