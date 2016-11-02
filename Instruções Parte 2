@@ -1,1 +1,44 @@
+# Trabalho-C.C-1
 
+
+Gramática de uma calculadora simples.
+Operações simples (atom) ou com parênteses (expr) como:
+   -> número operador número operador número
+   -> (número op número) op ( número )
+*número podendo ser negativo e decimal, e com quantas operações desejar.
+
+Comandos para a compilação usando a ferramenta antlr:
+   -> $ antlr4 calculator1.g4
+   -> $ javac calculator1*.java
+
+_________________________________________________________________________________________
+expr como parâmetro inicia irá gerar uma árvore de parse com as seguintes características:
+$ grun calculator1 expr -gui
+Esperará algo como por exemplo:
+   -> LPAREN número op número RPAREN
+  EX: ((-5.2 + 10) + 6.5) * (-5 + 10)
+^D
+*Abre parênteses, expressão, fecha parênteses, e com uma operação mais repetição dos mesmos opcional.
+*Aceita parênteses dentro de parênteses
+*Por ser bem complexo, pode possui ambiguidade e talvez não haja precedência em alguns casos.
+
+__________________________________________________________________________________________
+atom como parâmetro inicial irá gerar uma árvore de parse com as seguintes características:
+   -> $ grun calculator1 atom -gui
+Esperará algo como por exemplo:
+   -> número op número
+  EX: 5 + 80 * - 30
+^D
+*Livre de ambiguidade e com precedência.
+
+__________________________________________________________________________________________
+number como parâmetro inicial irá gerar uma árvore de parse com as seguintes características:
+   -> $ grun calculator1 number -gui
+Esperará algo como:
+   -> número
+EX: -5.7
+*aceita qualquer número pertencente aos reais dentro dos limites computacionais.
+
+RaynorFalx - Juliano
+ArcaXbcXde - Marcus
+Raquel - Raquel 
