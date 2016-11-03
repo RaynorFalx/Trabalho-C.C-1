@@ -1,0 +1,16 @@
+Instruções para rodar o Parser:
+_______________________________
+Comandos para compilar:
+java -jar dist/Compiler.jar -target scan -debug teste.txt
+
+_______________________________
+
+Scanner:
+
+Após compilar o Projeto co o ant execute:
+
+java -jar dist/Compiler.jar -target scan -debug provided/scanner/teste.txt
+
+java -jar dist/Compiler.jar -target parser -debug teste.txt
+
+Tivemos dificuildade com o sitema do Linux e não foi possivél executar o devidos testes, então não sabemos a suposta saida, em tese deve gerar uma mensagem de erro em casos de caracteres inválidos
