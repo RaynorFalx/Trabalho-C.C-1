@@ -3,6 +3,7 @@ _______________________________
 Comandos para compilar:
 java -jar dist/Compiler.jar -target scan -debug teste.txt
 
+Importe o o txt teste para o projeto 
 _______________________________
 
 Scanner:
