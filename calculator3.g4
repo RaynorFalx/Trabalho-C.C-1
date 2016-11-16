@@ -9,15 +9,15 @@ term
   ;
 
 number
-  :MINUS? DIGIT + (POINT DIGIT +)?
+  :MINUS? DIGIT + (POINT (DIGIT)+)?
   ;
 
 op
-  :multidiv
+  :multdiv
   |subsum
   ;
 
-multidv
+multdiv
   :TIMES
   |DIV
   ;
