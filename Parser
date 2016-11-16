@@ -14,11 +14,6 @@ options
 	buildAST=true;
 }
 
-expr
-   : LPAREN (expr op)* atom (op expr)* RPAREN
-	(op LPAREN (expr op)* atom (op expr)* RPAREN)*
-   ;
-
 atom
    : term (subsum atom)*
    ;
