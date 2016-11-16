@@ -32,12 +32,6 @@ class Main {
 								case DecafScannerTokenTypes.DIGIT:
 				    				type = " DIGITAL";
 				    				break;
-								case DecafScannerTokenTypes.LPARENT:
-				    				type = " OPENPAREN";
-				    				break;
-								case DecafScannerTokenTypes.RPARENT:
-				    				type = " CLOSEPAREN";
-				    				break;
 								case DecafScannerTokenTypes.TIMES:
 				    				type = " TIMESOP";
 				    				break;
@@ -68,7 +62,7 @@ class Main {
         	{
         		DecafScanner lexer = new DecafScanner(new DataInputStream(inputStream));
         		DecafParser parser = new DecafParser (lexer);
-                parser.program();
+                parser.atom();
         	}
         	
         } catch(Exception e) {
