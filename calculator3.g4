@@ -40,7 +40,11 @@ MINUS
   ;
 
 PLUS
-  :'+'
+  : '+'
+  ;
+  
+POINT
+  : '.'
   ;
 
 DIGIT
